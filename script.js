@@ -102,8 +102,13 @@ class PomodoroTimer {
     updateDisplay() {
         const minutes = Math.floor(this.timeLeft / 60);
         const seconds = this.timeLeft % 60;
-        this.timeDisplay.textContent = 
-            `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        const timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        
+        // Update the display on the page
+        this.timeDisplay.textContent = timeString;
+        
+        // Update the browser tab title
+        document.title = `${timeString} - Pomodoro Timer`;
     }
 
     start() {
