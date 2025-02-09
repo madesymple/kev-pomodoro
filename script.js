@@ -108,7 +108,7 @@ class PomodoroTimer {
         this.timeDisplay.textContent = timeString;
         
         // Update the browser tab title
-        document.title = `${timeString} - Pomodoro Timer`;
+        document.title = `${timeString} - Get Sh*t Done`;
     }
 
     start() {
